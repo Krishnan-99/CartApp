@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_add_cart"
+            android:layout_alignParentTop="true"
+            android:nestedScrollingEnabled="true">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/medium_margin">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:text="Massage"
+                        android:textSize="@dimen/sp_20"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="Massage"
+                        android:textSize="@dimen/sp_20"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <com.assessment.cartapp.utils.SquareImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="@dimen/sp_20" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/large_medium"
+                    android:text="Please select the employee(s) for this service. You can select multiple employees"
+                    android:textSize="@dimen/sp_14"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_employees"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/medium_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginRight="@dimen/medium_margin"
+                    tools:listitem="@layout/employee_item" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </ScrollView>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_add_cart"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="@dimen/large_medium"
+            android:backgroundTint="@drawable/btn_color"
+            android:enabled="false"
+            android:text="@string/add_service"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_20" />
+
+
+    </RelativeLayout>
+
+</layout>

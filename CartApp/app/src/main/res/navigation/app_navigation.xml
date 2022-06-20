@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/servicesFragment">
+    <fragment
+        android:id="@+id/servicesFragment"
+        android:name="com.assessment.cartapp.ui.fragments.ServiceListFragment"
+        android:label="@string/services"
+        tools:layout="@layout/fragment_service_list">
+
+        <action
+            android:id="@+id/action_servicesFragment_to_serviceDetailFragment"
+            app:destination="@id/serviceDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/serviceDetailFragment"
+        android:name="com.assessment.cartapp.ui.fragments.ServiceDetailsFragment"
+        android:label="@string/cart"
+        tools:layout="@layout/fragment_service_list">
+
+        <action
+            android:id="@+id/action_serviceDetailFragment_to_cartListFragment"
+            app:destination="@id/cartListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartListFragment"
+        android:name="com.assessment.cartapp.ui.fragments.CartListFragment"
+        android:label="@string/cart" />
+
+
+</navigation>

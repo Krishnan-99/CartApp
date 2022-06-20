@@ -8,7 +8,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.balaabirami.cartapp"
+        applicationId "com.assessment.cartapp"
         minSdk 21
         targetSdk 31
         versionCode 1
